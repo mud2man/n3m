@@ -1,0 +1,32 @@
+{
+  "name": "n3m app",
+  "description": "n3m app",
+  "keywords": [
+    "react",
+    "webpack",
+    "boilerplate",
+    "production",
+    "flask",
+    "python",
+    "less",
+    "hot",
+    "reload"
+  ],
+  "website": "https://github.com/team-n3m/n3m",
+  "logo": "",
+  "addons": [],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/ddollar/heroku-buildpack-multi",
+    "NODE_ENV": {
+      "description": "`NODE_ENV` environment variable to `production` to disable debugging etc.",
+      "value": "development"
+    },
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "",
+      "value": ""
+    }
+  },
+  "scripts": {
+    "postdeploy": "python server/initdb.py"
+  }
+}
