@@ -11,7 +11,7 @@ if (process.env.NODE_ENV !== 'test') {
   config = update(config, {
     entry: {
       $set: [
-        'webpack-dev-server/client?http://localhost:3000',
+        'webpack-dev-server/client?http://localhost:80',
         'webpack/hot/dev-server',
         './client/entry'
       ]
@@ -30,7 +30,7 @@ config = update(config, {
     $set: {
       path: path.join(process.cwd(), '/dev/static/scripts'),
       pathInfo: true,
-      publicPath: 'http://localhost:3000/static/scripts/',
+      publicPath: 'http://localhost:80/static/scripts/',
       filename: 'main.js'
     }
   },
@@ -59,7 +59,7 @@ config = update(config, {
     $set: {
       publicPath: '/static/scripts/',
 
-      port: 3000,
+      port: 80,
 
       contentBase: './dev',
 
@@ -74,12 +74,12 @@ config = update(config, {
       historyApiFallback: true,
 
       headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3001',
+        'Access-Control-Allow-Origin': 'http://localhost:81',
         'Access-Control-Allow-Headers': 'X-Requested-With'
       },
 
       proxy: {
-        '/api/*': 'http://localhost:3001'
+        '/api/*': 'http://localhost:81'
       }
     }
   }
