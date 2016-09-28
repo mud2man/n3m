@@ -5,13 +5,13 @@ RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   DEBIAN_FRONTEND=noninteractive apt-get -y update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y libssl-dev && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y git vim wget && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y git vim wget tmux && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y vim-nox-py2 && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs npm && \
   DEBIAN_FRONTEND=noninteractive apt-get -y install python-psycopg2 && \
   DEBIAN_FRONTEND=noninteractive apt-get -y install python-pip python-dev && \
   DEBIAN_FRONTEND=noninteractive apt-get -y install sudo && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install postgresql postgresql-contrib  
+  DEBIAN_FRONTEND=noninteractive apt-get -y install postgresql postgresql-contrib libpq-dev 
 
 RUN \
   echo "America/New_York" > /etc/timezone && \

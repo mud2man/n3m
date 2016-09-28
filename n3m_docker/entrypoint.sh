@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo service postgresql start &
 cd /home/n3m/git
 if [ ! -d "./n3m" ]; then
   source /home/n3m/.bashrc
@@ -21,6 +22,5 @@ else
   . venv/bin/activate 
 fi
 
-sudo service postgresql start &
 exec $@
 
