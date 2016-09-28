@@ -2,6 +2,7 @@
 
 cd /home/n3m/git
 if [ ! -d "./n3m" ]; then
+  mkdir /home/n3m/.vimundo
   git clone https://github.com/team-n3m/n3m.git
   cd n3m
   virtualenv venv
@@ -13,6 +14,5 @@ else
 fi
 
 sudo service postgresql start &
-sh run.sh
 exec $@
 

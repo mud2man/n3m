@@ -17,17 +17,21 @@ You can use the docker file included in this repo which will create a working de
 1. Install Docker (https://www.docker.com/products/docker)
 2. execute the following commands from the repository root:
 ```
-docker build -t n3m:v1 n3m_docker 
+sh build_docker.sh 
 sh run_docker.sh
 ```
 3. This will bring you to a command prompt with everything installed, the database daemon started, the app ready to start running. 
 
-The next thing you need to do is create an empty postgres database called n3m, create a database user n3m with full priveledges. Then modify the .env file to point at this database. e.g. postgres:///n3m
 
 After that run 
 ```
 sh run.sh
 ```
-
-
 You should then be able to access the web interface of the app from your local dev machine at http://localhost:5000. Note that you cannot have a running process on your host machine at port 5000.. 
+
+### Next Steps
+ * Create an empty postgres database called n3m, 
+ * create a database user n3m with full priveledges.
+ * create environment file to hold env variables for app
+ * add database connectivity to app
+

@@ -25,6 +25,9 @@ set colorcolumn=80             " ugh, but ok I'll conform, most of the time :)
 set timeoutlen=1000 ttimeoutlen=0
 set t_Co=256
 
+set undofile
+set undodir=/home/n3m/.vimundo/
+
 " ignore files/paths for vim and CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,node_modules
 
@@ -38,12 +41,11 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'scrooloose/nerdtree'
 Plugin 'wesleyche/SrcExpl'
 Plugin 'majutsushi/tagbar'
-Plugin 'fatih/vim-go'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -52,7 +54,7 @@ filetype plugin indent on
 " ---
 syntax enable                  " turn on syntax highlighting
 set background=dark
-colorscheme hybrid 
+colorscheme slate 
 if has('mouse')
   set mouse=a                  " enable mouse for all 
   set ttymouse=xterm2

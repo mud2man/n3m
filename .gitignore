@@ -1,3 +1,5 @@
 *.pyc
 node_modules
 venv
+git/
+n3m_docker/dotfiles/.vim/
