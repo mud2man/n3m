@@ -40,7 +40,7 @@ COPY entrypoint.sh /home/n3m/entrypoint.sh
 
 #install vundle for vim dev
 RUN \
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+  git clone https://github.com/VundleVim/Vundle.vim.git /home/n3m/.vim/bundle/Vundle.vim 
 
 
 # fix permissions
