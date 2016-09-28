@@ -1,3 +1,5 @@
 #!/bin/bash
 
-python project/app.py
+pushd static
+npm start
+
