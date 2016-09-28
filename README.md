@@ -25,13 +25,10 @@ sh run_docker.sh
 
 After that run 
 ```
-sh run.sh
+sh server.sh &
+sh web.sh &
 ```
 You should then be able to access the web interface of the app from your local dev machine at http://localhost:5000. Note that you cannot have a running process on your host machine at port 5000.. 
 
 ### Next Steps
- * Create an empty postgres database called n3m, 
- * create a database user n3m with full priveledges.
- * create environment file to hold env variables for app
- * add database connectivity to app
 
