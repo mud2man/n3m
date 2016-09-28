@@ -26,9 +26,8 @@ The next thing you need to do is create an empty postgres database called n3m, c
 
 After that run 
 ```
-python server/initdb.py
-npm start
+sh run.sh
 ```
 
 
-You should then be able to access the web interface of the app from your local dev machine at http://localhost. Note that you cannot have a running process on you host machine bound to either port 80 or 443. 
+You should then be able to access the web interface of the app from your local dev machine at http://localhost:5000. Note that you cannot have a running process on your host machine at port 5000.. 
