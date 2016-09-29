@@ -17,8 +17,8 @@ if [ ! -d "./n3m" ]; then
   sudo -H -u postgres bash -c "createuser -r -s -d --replication n3m"
   createdb n3mdb
   python manage.py create_db
-  python manage.py n3mdb upgrade
-  python manage.py n3mdb migrate 
+  python manage.py db upgrade
+  python manage.py db migrate 
   cd static
   npm install
 else
