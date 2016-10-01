@@ -19,9 +19,11 @@ You can use the docker file included in this repo which will create a working de
 ```
 sh build_docker.sh 
 sh run_docker.sh
+
 ```
 3. This will bring you to a command prompt with everything installed, the database daemon started, the app ready to start running. 
 
+docker start -ai n3m
 
 After that run 
 ```
