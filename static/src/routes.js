@@ -11,6 +11,7 @@ import RegisterView from './components/RegisterView';
 import ProtectedView from './components/ProtectedView';
 import About from './components/About';
 import ProfileView from './components/ProfileView';
+import HelloNamo from './components/HelloNamo';
 import NotFound from './components/NotFound';
 
 import { DetermineAuth } from './components/DetermineAuth';
@@ -24,7 +25,7 @@ export default (
         <Route path="register" component={requireNoAuthentication(RegisterView)} />
         <Route path="home" component={requireNoAuthentication(HomeContainer)} />
         <Route path="about" component={requireAuthentication(About)} />
-        <Route path="profile" component={requireAuthentication(ProfileView)} />
+        <Route path="hellonamo" component={requireAuthentication(HelloNamo)} />
         <Route path="*" component={DetermineAuth(NotFound)} />
     </Route>
 );
